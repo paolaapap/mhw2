@@ -168,7 +168,7 @@ function hideSearchBar(event){
   
 function onWriteText(){
     const newDiv = document.createElement("span");  
-    newDiv.textContent='X';
+    newDiv.textContent='CANCEL';
     newDiv.classList.add('modal_view_div');
     modalView.appendChild(newDiv); 
     textBox.removeEventListener('input', onWriteText);
