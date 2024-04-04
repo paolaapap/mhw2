@@ -21,7 +21,7 @@ header {
 
 .header_nav_upper{
     background-color: #fff;
-    width: 77vw;
+    width: 78vw;
     height: 64px;
     padding: 32px 48px 0px 48px;
     border: 0;
@@ -60,16 +60,16 @@ header {
 .header_nav_lower, .header_scroll{
     display: flex;
     background-color: #fff;
-    width: 100vw;
+    width: 78vw;
     height: 50px;
     padding: 0px 48px;
     border: 0;
     margin: 0px 119px;
     justify-content: space-between;
-    position: fixed;
+    position: sticky;
 }
 .header_nav_lower .d1{
-    width: 62vw;
+    width: 60%;
     background-color: #fff;
 }
 .header_nav_lower span, .header_nav_lower a, .header_scroll {
@@ -119,7 +119,7 @@ header {
 }
 
 .white{
-    width: 100vw;
+    width: 100%;
     height: 70px;
     background-color: white;
     position: fixed;
