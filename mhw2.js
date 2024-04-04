@@ -1,5 +1,6 @@
 //PROBLEMA CHIUSURA DELLA MODAL VIEW
 //PROBLEMA EVENT.PREVENTDEFAULT
+//PROBLEMA IMMAGINI
 
 
 
@@ -161,11 +162,17 @@ searchIconScroll.addEventListener('click', showSearchBar);
 function hideSearchBar(event){
         modalView.classList.add('hidden');
         document.body.classList.remove('no-scroll');
-        event.stopPropagation();
 }
 
-//modalView.addEventListener('click', hideSearchBar, {capture: true});
-  
+modalView.addEventListener('click', hideSearchBar);
+
+function stopProp(event)
+{
+    event.stopPropagation();
+}
+
+textBox.addEventListener('click', stopProp);
+
 function onWriteText(){
     const newDiv = document.createElement("span");  
     newDiv.textContent='CANCEL';
@@ -173,6 +180,7 @@ function onWriteText(){
     modalView.appendChild(newDiv); 
     textBox.removeEventListener('input', onWriteText);
     newDiv.addEventListener('click', deleteText); 
+    newDiv.addEventListener('click', stopProp);
 }
 
 textBox.addEventListener('input', onWriteText);
