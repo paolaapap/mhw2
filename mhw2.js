@@ -68,7 +68,6 @@ function changeImg(event) {
     switch (index) {
         case 1:
             image.src = 'images/s1_js.jpg';
-            console.log('suca');
             break;
         case 2:
             image.src = 'images/s2_js.jpg';
